@@ -12,7 +12,7 @@ while stack:
     invite = set()
     while stack:
         invite.add(stack.pop())
-        answer += 1
+    answer += len(invite)
     for group in groups:
         group -= invite
         if len(group) == 1:
