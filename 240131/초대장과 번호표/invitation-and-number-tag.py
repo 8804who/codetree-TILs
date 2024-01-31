@@ -10,6 +10,5 @@ while invite_now:
         group -= invite_now
         if len(group) == 1:
             invite_next.update(group)
-    invite_now = invite_next
-    
+    invite_now = invite_next 
 print(answer)
