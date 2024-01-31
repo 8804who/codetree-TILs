@@ -7,15 +7,14 @@ for _ in range(G):
     groups.append(members)
 
 answer = 0
-stack = [1]
-while stack:
-    invite = set()
-    while stack:
-        invite.add(stack.pop())
-    answer += len(invite)
+invite_now = set([1])
+while invite_now:
+    invite_next = set()
+    answer += len(invite_now)
     for group in groups:
-        group -= invite
+        group -= invite_now
         if len(group) == 1:
-            stack.append(tuple(group)[0])
+            invite_next.update(group)
+    invite_now = invite_next
     
 print(answer)
