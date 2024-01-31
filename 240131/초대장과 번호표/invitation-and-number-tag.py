@@ -1,10 +1,5 @@
 N, G = map(int, input().split())
-
-groups = []
-
-for _ in range(G):
-    members = set(list(map(int, input().split()))[1:])
-    groups.append(members)
+groups = [set(list(map(int, input().split()))[1:]) for _ in range(G)]
 
 answer = 0
 invite_now = set([1])
