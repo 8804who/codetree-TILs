@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
     int answer = 1;
-    long N, T;
+    long long N, T;
     vector<pair<int, int>> v;
 
     int start, speed, end;
@@ -19,7 +19,7 @@ int main() {
 
     sort(v.begin(), v.end());
     
-    long temp = v[N-1].second;
+    long long temp = v[N-1].second;
 
     for (int i=N-2;i>=0;i--){
         if (temp > v[i].second){
