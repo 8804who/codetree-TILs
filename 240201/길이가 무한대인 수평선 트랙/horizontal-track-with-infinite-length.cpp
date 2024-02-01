@@ -8,6 +8,7 @@ int main() {
     int N, T;
     vector<pair<int, int>> v;
 
+    
 
     int start, speed, end;
     cin >> N >> T;
@@ -19,15 +20,16 @@ int main() {
     }
 
     sort(v.begin(), v.end());
-    reverse(v.begin(), v.end());
     
-    int temp = v[0].second;
+    int temp = v[N-1].second;
 
-    for (int i=1;i<N;i++)
+    for (int i=N-2;i>=0;i--){
         if (temp > v[i].second){
             answer++;
             temp = v[i].second;
         }
+    }
+        
     cout << answer;
     return 0;
 }
