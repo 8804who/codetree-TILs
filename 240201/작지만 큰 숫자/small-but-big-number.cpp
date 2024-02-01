@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    int n, m, temp;
+    int n, m, temp, min;
     set<int> sets;
 
     cin >> n >> m;
@@ -16,15 +16,15 @@ int main() {
 
     for (int i=0;i<m;i++){
         cin >> temp;
-        int min = -1;
-        for (int num:sets){
-            if (num<=temp)
-                min = num;
-            else
-                break;
+        auto it = sets.upper_bound(temp);
+        if (it == sets.begin()){
+            cout << "-1" << endl;
         }
-        sets.erase(min);
-        cout << min <<'\n';
+        else{
+            it--;
+            cout << *it << endl;
+            sets.erase(*it);
+        }
     }
 
     return 0;
