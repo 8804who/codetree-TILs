@@ -5,10 +5,8 @@ using namespace std;
 
 int main() {
     int answer = 1;
-    int N, T;
+    long N, T;
     vector<pair<int, int>> v;
-
-    
 
     int start, speed, end;
     cin >> N >> T;
@@ -21,9 +19,10 @@ int main() {
 
     sort(v.begin(), v.end());
     
-    int temp = v[N-1].second;
+    long temp = v[N-1].second;
 
     for (int i=N-2;i>=0;i--){
+        cout << v[i].first << endl;
         if (temp > v[i].second){
             answer++;
             temp = v[i].second;
