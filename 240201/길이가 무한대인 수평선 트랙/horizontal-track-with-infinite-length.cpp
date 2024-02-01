@@ -22,7 +22,6 @@ int main() {
     long temp = v[N-1].second;
 
     for (int i=N-2;i>=0;i--){
-        cout << v[i].first << endl;
         if (temp > v[i].second){
             answer++;
             temp = v[i].second;
