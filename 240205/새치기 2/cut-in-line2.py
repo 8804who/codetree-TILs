@@ -92,7 +92,7 @@ for i in range(Q):
             if name == b:
                 break
             name = next_name
-            
+
 for name in first_of_lines:
     while True:
         print(name, end=' ')
