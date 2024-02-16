@@ -1,11 +1,10 @@
 #include <algorithm>
 #include <iostream>
-#include <vector>
+
 
 using namespace std;
 
 int N, x1, x2, answer;
-
 vector<pair<int, int>> v;
 
 int main() {
