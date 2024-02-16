@@ -13,29 +13,16 @@ int main() {
     int arr[N][2];
     int left[N];
     int right[N];
-    for (int i=0;i<N;i++)
-    {
-        scanf("%d %d", &arr[i][0], &arr[i][1]);
-    }
-
-    for (int i=0;i<N;i++)
-    {
-        left[i] = 0;
-        right[i] = 0;
-    }
-
-    for (int i=1;i<N;i++)
-    {
-        left[i] = get_distance(arr[i-1], arr[i])+left[i-1];
-    }
-
-    for (int i=N-2;i>0;i--)
-    {
-        right[i] = get_distance(arr[i], arr[i+1])+right[i+1]; 
-    }
-
     int answer = 1e9;
+    left[0] = 0;
+    right[N-1] = 0;
 
+    for (int i=0;i<N;i++)
+        scanf("%d %d", &arr[i][0], &arr[i][1]);
+    for (int i=1;i<N;i++)
+        left[i] = get_distance(arr[i-1], arr[i])+left[i-1];
+    for (int i=N-2;i>0;i--)
+        right[i] = get_distance(arr[i], arr[i+1])+right[i+1]; 
     for (int i=1;i<N-1;i++)
     {
         if (answer > left[i-1]+right[i+1]+get_distance(arr[i-1], arr[i+1]))
