@@ -1,7 +1,6 @@
 #include <algorithm>
 #include <iostream>
 
-
 using namespace std;
 
 int N, x1, x2, answer;
@@ -21,7 +20,6 @@ int main() {
     }
     sort(v.begin(), v.end());
 
-    
     left[0]=v[0].second;
     right[N-1]=v[N-1].second;
 
@@ -30,10 +28,8 @@ int main() {
     for (int i=N-2;i>=0;i--)
         right[i]=min(right[i+1],v[i].second);
     for (int i=0;i<N;i++)
-    {
         if (left[i] == right[i])
             answer++;
-    }
     printf("%d", answer);
     return 0;
 }
