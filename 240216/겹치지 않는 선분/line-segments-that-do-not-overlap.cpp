@@ -28,8 +28,8 @@ int main() {
     for (int i=N-2;i>=0;i--)
         right[i]=min(right[i+1],v[i].second);
     for (int i=0;i<N;i++)
-        if (left[i] == right[i])
-            answer++;
+        if (left[i] == right[i]) answer++;
+        
     printf("%d", answer);
     return 0;
 }
