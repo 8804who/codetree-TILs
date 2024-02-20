@@ -20,7 +20,7 @@ int main() {
     int answer = 0;
     for (int i=1;i<=200000;i++)
     {
-        arr[i] = arr[i-1]+arr[i];
+        arr[i] += arr[i-1];
         if (answer < arr[i]) answer = arr[i];
     }
     printf("%d", answer);
