@@ -12,7 +12,7 @@ int main() {
     {
         scanf("%d %d", &s, &e);
         v.push_back(make_pair(s,1));
-        v.push_back(make_pair(e,-1));
+        v.push_back(make_pair(e+1,-1));
     }
 
     sort(v.begin(),v.end());
