@@ -9,8 +9,6 @@ int main() {
     vector<pair<int, int>> v;
     scanf("%d", &n);
 
-    int arr[200001];
-    for (int i=0;i<200001;i++) arr[i] = 0;
     for (int i=0;i<n;i++) 
     {
         scanf("%d %d",&x1, &x2);
