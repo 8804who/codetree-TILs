@@ -11,5 +11,4 @@ for i in range(len(c)-2,-1,-1):
 for i in range(1,len(c)):
     if c[i] == '(' and c[i-1] == '(':
         answer += arr[i]
-
 print(answer)
