@@ -5,11 +5,9 @@ int main() {
     int arr[n];
 
     scanf("%d %d",&n, &k);
-
     for (int i=0;i<n;i++) scanf("%d",&arr[i]);
 
-    int s = 0;
-    int e = 0;
+    int s = 0, e=0;
     int count = arr[0]==1 ? 1:0;
     int answer = -1;
     while (s<=e)
