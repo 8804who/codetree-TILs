@@ -6,15 +6,15 @@ int main() {
     scanf("%d",&m);
     scanf("%d %d",&a, &b);
 
-    long long min = m;
-    long long max = 0;
+    int min = 1e9;
+    int max = 0;
 
     for (int i=a;i<=b;i++)
     {
         long long mid;
         long long s = 1;
         long long e = m;
-        long long count = 0;
+        int count = 0;
 
         while (s<=e)
         {
@@ -27,6 +27,6 @@ int main() {
         if (count<min) min=count;
         if (count>max) max=count;
     }
-    printf("%lld %lld",min,max);
+    printf("%d %d",min,max);
     return 0;
 }
