@@ -8,6 +8,7 @@ int main() {
 
     int min = 1e9;
     int max = 0;
+    int count;
     long long mid;
     long long s;
     long long e;
@@ -16,7 +17,7 @@ int main() {
     {
         s = 1;
         e = m;
-        int count = 0;
+        count = 0;
 
         while (s<=e)
         {
