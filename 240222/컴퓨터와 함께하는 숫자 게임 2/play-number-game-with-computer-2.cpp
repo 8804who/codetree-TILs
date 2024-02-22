@@ -6,8 +6,8 @@ int main() {
     scanf("%d",&m);
     scanf("%d %d",&a, &b);
 
-    int min = 1e9;
-    int max = 0;
+    int min_answer = 1e9;
+    int max_answer = 0;
     int count;
     long long mid;
     long long s;
@@ -27,9 +27,9 @@ int main() {
             else if(mid > i) e=mid-1;
             else s=mid+1;
         }
-        if (count<min) min=count;
-        if (count>max) max=count;
+        if (count<min_answer) min_answer=count;
+        if (count>max_answer) max_answer=count;
     }
-    printf("%d %d",min,max);
+    printf("%d %d",min_answer,max_answer);
     return 0;
 }
