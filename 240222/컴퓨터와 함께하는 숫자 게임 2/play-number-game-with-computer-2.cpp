@@ -8,12 +8,14 @@ int main() {
 
     int min = 1e9;
     int max = 0;
+    long long mid;
+    long long s;
+    long long e;
 
     for (int i=a;i<=b;i++)
     {
-        long long mid;
-        long long s = 1;
-        long long e = m;
+        s = 1;
+        e = m;
         int count = 0;
 
         while (s<=e)
