@@ -27,6 +27,6 @@ int main() {
         if (count<min) min=count;
         if (count>max) max=count;
     }
-    printf("%d %d",min,max);
+    printf("%lld %lld",min,max);
     return 0;
 }
