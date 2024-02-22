@@ -24,7 +24,6 @@ int main() {
             }
             else total+=arr[i];
         }
-        printf("%d %d\n",mid, count);
         if (count>m) s=mid+1;
         else
         {
