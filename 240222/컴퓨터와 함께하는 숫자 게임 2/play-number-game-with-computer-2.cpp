@@ -34,6 +34,6 @@ int main() {
         min_answer=min(min_answer,count);
         max_answer=max(max_answer,count);
     }
-    printf("%d %d",min_answer,max_answer);
+    cout << min_answer << " " <<max_answer;
     return 0;
 }
