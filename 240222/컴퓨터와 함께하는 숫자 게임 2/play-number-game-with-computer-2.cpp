@@ -1,20 +1,20 @@
 #include <iostream>
 
 int main() {
-    int m, a, b;
+    long long m, a, b;
     
     scanf("%d",&m);
     scanf("%d %d",&a, &b);
 
-    int min = m;
-    int max = 0;
+    long long min = m;
+    long long max = 0;
 
     for (int i=a;i<=b;i++)
     {
-        int mid;
-        int s = 1;
-        int e = m;
-        int count = 0;
+        long long mid;
+        long long s = 1;
+        long long e = m;
+        long long count = 0;
 
         while (s<=e)
         {
