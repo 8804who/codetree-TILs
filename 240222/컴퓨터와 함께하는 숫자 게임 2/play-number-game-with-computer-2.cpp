@@ -1,5 +1,8 @@
 #include <iostream>
 #include <climits>
+#include <algorithm>
+
+using namespace std;
 
 int main() {
     long long m, a, b;
@@ -28,8 +31,8 @@ int main() {
             else if(mid > i) e=mid-1;
             else s=mid+1;
         }
-        if (count<min_answer) min_answer=count;
-        if (count>max_answer) max_answer=count;
+        min_answer=min(min_answer,count);
+        max_answer=max(max_answer,count);
     }
     printf("%d %d",min_answer,max_answer);
     return 0;
