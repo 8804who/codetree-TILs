@@ -5,19 +5,16 @@
 using namespace std;
 
 long long m, a, b;
-long long mid;
-long long s;
-long long e;
 
 int GetTryNum(long long target)
 {
-    s = 1;
-    e = m;
+    long long s = 1;
+    long long e = m;
     int count = 0;
 
     while (s<=e)
     {
-        mid = (s+e)/2;
+        long long mid = (s+e)/2;
         count++;
         if (mid == target) return count;
         if(mid > target) e=mid-1;
