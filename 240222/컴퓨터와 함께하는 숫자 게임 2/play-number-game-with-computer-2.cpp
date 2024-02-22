@@ -25,8 +25,8 @@ int GetTryNum(long long target)
 }
 
 int main() {
-    cin >> m;
-    cin >> a >> b;
+    scanf("%lld",&m);
+    scanf("%lld %lld",&a, &b);
 
     int min_answer = INT_MAX;
     int max_answer = INT_MIN;
