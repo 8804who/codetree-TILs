@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 
 int main() {
     long long m, a, b;
@@ -6,8 +7,8 @@ int main() {
     scanf("%d",&m);
     scanf("%d %d",&a, &b);
 
-    int min_answer = 1e9;
-    int max_answer = 0;
+    int min_answer = INT_MAX;
+    int max_answer = INT_MIN;
     int count;
     long long mid;
     long long s;
