@@ -6,10 +6,16 @@ int main() {
 
     int arr[n];
 
-    for (int i=0;i<n;i++) scanf("%d", &arr[i]);
-    int answer = 144000000;
     int s=1;
     int e=144000000;
+
+    for (int i=0;i<n;i++) 
+    {
+        scanf("%d", &arr[i]);
+        if (arr[i]>s) s=arr[i];
+    }
+    int answer = 144000000;
+    
     while(s<=e)
     {
         int mid = (s+e)/2;
