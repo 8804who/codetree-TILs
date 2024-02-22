@@ -4,7 +4,8 @@
 
 using namespace std;
 
-long long m, a, b;
+long long m;
+long long a, b;
 
 int GetTryNum(long long target)
 {
@@ -24,8 +25,8 @@ int GetTryNum(long long target)
 }
 
 int main() {
-    scanf("%d",&m);
-    scanf("%d %d",&a, &b);
+    cin >> m;
+    cin >> a >> b;
 
     int min_answer = INT_MAX;
     int max_answer = INT_MIN;
