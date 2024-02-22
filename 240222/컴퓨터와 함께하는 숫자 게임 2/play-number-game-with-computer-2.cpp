@@ -28,7 +28,7 @@ int main() {
             mid = (s+e)/2;
             count++;
             if (mid == i) break;
-            else if(mid > i) e=mid-1;
+            if(mid > i) e=mid-1;
             else s=mid+1;
         }
         min_answer=min(min_answer,count);
