@@ -2,6 +2,9 @@ n = int(input())
 
 arr = [list(map(int, input().split())) for _ in range(n)]
 
+for i in range(n):
+    arr[i][i] = 1
+
 for k in range(n):
     for i in range(n):
         for j in range(n):
