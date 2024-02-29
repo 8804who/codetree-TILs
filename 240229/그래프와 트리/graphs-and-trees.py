@@ -20,7 +20,6 @@ for i in range(1, n+1):
     temp = True
     while q:
         prev, now = q.popleft()
-
         for next_node in graph[now]:
             if next_node == prev:
                 continue
