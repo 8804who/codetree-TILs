@@ -1,4 +1,4 @@
-from collections import deque
+import heapq
 
 n, m = map(int, input().split())
 
@@ -9,21 +9,21 @@ for _ in range(m):
     graph[a].append(b)
     arr[b] += 1
 
-q = deque()
+heap = []
 
 for i in range(1, n+1):
     if arr[i] == 0:
-        q.append(i)
+        heapq.heappush(heap,i)
 answer = []
-while q:
-    num = q.popleft()
+
+while heap:
+    num = heapq.heappop(heap)
     n -= 1
     answer.append(num)
     for i in graph[num]:
         arr[i] -= 1
         if arr[i] == 0:
-            q.append(i)
-
+            heapq.heappush(heap,i)
 if n == 0:
     print(*answer)
 else:
