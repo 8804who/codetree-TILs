@@ -13,17 +13,17 @@ def find(a):
 
 n = int(input())
 
+edges = []
 parent = [i for i in range(n)]
 points = [list(map(int, input().split()))+[i] for i in range(n)]
+
 points.sort(key=lambda x:x[0])
-
-edges = []
-
 for i in range(n-1):
     point1 = points[i][3]
     point2 = points[i+1][3]
     dist = points[i+1][0]-points[i][0]
     edges.append([dist, point1, point2])
+
 points.sort(key=lambda x:x[1])
 for i in range(n-1):
     point1 = points[i][3]
@@ -39,8 +39,7 @@ for i in range(n-1):
 
 edges.sort()
 answer = 0
-for edge in edges:
-    dist, p1, p2 = edge
+for dist, p1, p2 in edges:
     if find(p1) != find(p2):
         answer += dist
         union(p1, p2)
